@@ -88,13 +88,13 @@ https://github.com/user-attachments/assets/01694ee6-2bb5-40bb-aab4-9c03d5f24b44
 
 ### For lambda layer
 
-    #### Create a build directory:
+    - Create a build directory:
 
         mkdir pillow-layer
         cd pillow-layer
         mkdir python
 
-    Use Docker to build Pillow in Amazon Linux-compatible environment
+    - Use Docker to build Pillow in Amazon Linux-compatible environment
 
         Run this in your terminal:
 
@@ -106,8 +106,10 @@ https://github.com/user-attachments/assets/01694ee6-2bb5-40bb-aab4-9c03d5f24b44
             pip install Pillow -t /mnt/output
             exit
 
-    Zip the python folder:
+    - Zip the python folder:
 
         zip -r pillow_layer.zip python
+
+    - Upload pillow_layer.zip in the layer session for your lambda function 
 
     
