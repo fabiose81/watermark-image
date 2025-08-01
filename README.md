@@ -88,7 +88,7 @@ https://github.com/user-attachments/assets/01694ee6-2bb5-40bb-aab4-9c03d5f24b44
 
 ### For lambda layer
 
-    Create a build directory:
+    #### Create a build directory:
 
         mkdir pillow-layer
         cd pillow-layer
