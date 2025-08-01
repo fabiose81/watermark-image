@@ -49,7 +49,7 @@ func Upload(filename string) error {
 }
 
 func LoadCustomAWSConfig() (aws.Config, error) {
-	profile := os.Getenv("KEY_PROFILE")
+	profile := os.Getenv("AWS_PROFILE")
 	region := os.Getenv("S3_REGION")
 
 	cfg, err := config.LoadDefaultConfig(
