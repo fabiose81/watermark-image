@@ -85,3 +85,29 @@ https://github.com/user-attachments/assets/01694ee6-2bb5-40bb-aab4-9c03d5f24b44
         save_image_to_bucket(watermarked_image, key)
 
         delete_image_from_bucket(key)
+
+### For lambda layer
+
+    Create a build directory:
+
+        mkdir pillow-layer
+        cd pillow-layer
+        mkdir python
+
+    Use Docker to build Pillow in Amazon Linux-compatible environment
+
+        Run this in your terminal:
+
+            docker run -v "$PWD"/python:/mnt/output -it public.ecr.aws/lambda/python:3.9 bash
+
+        Inside the container:
+
+            pip install --upgrade pip
+            pip install Pillow -t /mnt/output
+            exit
+
+    Zip the python folder:
+
+        zip -r pillow_layer.zip python
+
+    
